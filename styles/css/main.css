@@ -1,0 +1,418 @@
+@import '../../assets/fonts/fonts.css';
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #d7d7d7;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Proxima Nova", sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  padding: 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  margin-top: 100px;
+  width: 100%;
+  max-width: 768px;
+  padding-bottom: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (max-width: 744px) {
+  .card {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+.card__header {
+  padding: 24px 24px 0 24px;
+}
+.card__header-wrapper {
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 744px) {
+  .card__header {
+    padding: 16px 16px 0 16px;
+  }
+  .card__header-wrapper {
+    padding-bottom: 16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.card__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card__user-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__user-data {
+  margin-left: 12px;
+}
+.card__user-name {
+  max-width: 233px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card__user-text {
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 744px) {
+  .card__user {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .card__user-data {
+    width: calc(100% - 40px);
+    margin-left: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card__user-text span {
+    display: none;
+  }
+}
+.card__statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.card__statistics-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.card__statistics-item {
+  width: 64px;
+}
+.card__statistics-item:not(:first-child) {
+  margin-left: 12px;
+}
+.card__statistics-text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.card__statistics-text:first-child {
+  padding-bottom: 4px;
+}
+.card__statistics-text:last-child {
+  padding-top: 4px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.card__statistics-text_green {
+  color: #62B435;
+}
+.card__statistics-text_grey {
+  color: rgba(0, 0, 0, 0.4);
+}
+.card__statistics-text_red {
+  color: #F64747;
+}
+.card__statistics-text_black {
+  font-weight: 200;
+}
+@media (max-width: 744px) {
+  .card__statistics {
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    margin-top: -12px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card__statistics-item {
+    position: relative;
+    width: auto;
+  }
+  .card__statistics-item:not(:first-child) {
+    margin-left: 13px;
+  }
+  .card__statistics-item:not(:last-child):before {
+    content: "/";
+    display: block;
+    position: absolute;
+    right: -8px;
+    top: -1px;
+    color: rgba(0, 0, 0, 0.2);
+  }
+  .card__statistics-text {
+    font-weight: 400;
+  }
+  .card__statistics-text:first-child {
+    display: none;
+  }
+  .card__statistics-text:last-child {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+.card__body {
+  margin-top: 20px;
+  margin-bottom: 24px;
+  padding: 0 24px 0 24px;
+  height: 120px;
+}
+@media (max-width: 744px) {
+  .card__body {
+    margin-top: 16px;
+    padding: 0 16px 0 16px;
+  }
+}
+.card__body-text {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.01px;
+}
+.card__body-text:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 27px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(16.67%, rgba(255, 255, 255, 0)), to(#FFFFFF));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 16.67%, #FFFFFF 100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.card__body-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 4px auto 0 auto;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 4px 12px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 2px 4px 12px 0 rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  cursor: pointer;
+}
+.card__body-btn img {
+  width: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.card__body_opened {
+  height: auto;
+  margin-bottom: 0;
+}
+.card__body_opened .card__body-btn {
+  margin-bottom: -24px;
+}
+.card__body_opened .card__body-btn img {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+.card__body_opened .card__body-text:before {
+  opacity: 0;
+}
+.card__banner {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  padding: 0 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: rgba(240, 241, 242, 0.4);
+  border-left: 2px solid rgb(52, 152, 219);
+}
+@media (max-width: 744px) {
+  .card__banner {
+    height: 146px;
+    padding: 16px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+.card__forecast-title {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+.card__forecast-text {
+  max-width: 423px;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 744px) {
+  .card__forecast-text {
+    max-width: 223px;
+    white-space: wrap;
+    font-size: 16px;
+  }
+}
+.card__bet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card__bet-coefficient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card__bet-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__bet-info {
+  margin-left: 12px;
+}
+.card__bet-title {
+  color: rgb(51, 51, 51);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+}
+.card__bet-num {
+  font-size: 20px;
+  font-family: "proxima_nova_ltsemibold";
+  line-height: 24px;
+}
+.card__bet-btn {
+  width: 140px;
+  height: 40px;
+  margin-left: 16px;
+  border-radius: 4px;
+  background-color: rgb(52, 152, 219);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.card__bet-btn:hover {
+  background-color: rgb(37, 133, 197);
+}
+.card__bet-btn:active {
+  background-color: rgb(27, 110, 166);
+}
+@media (max-width: 744px) {
+  .card__bet {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card__bet-coefficient {
+    margin-top: 26px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .card__bet-info {
+    margin-left: 8px;
+  }
+  .card__bet-title {
+    width: 29px;
+    margin-top: 2px;
+    overflow: hidden;
+  }
+  .card__bet-num {
+    margin-top: -2px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .card__bet-btn {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    width: calc(100% - 32px);
+    margin-left: 0;
+  }
+}
